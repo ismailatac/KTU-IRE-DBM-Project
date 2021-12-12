@@ -25,7 +25,7 @@ function Harf(e) {
 
 }
 
-function uyari(a){
+function uyari(a,b){
 	if(a==1){
 		$('#uyari').modal();
 		$("#uyari").on('shown.bs.modal', function () {
@@ -36,6 +36,9 @@ function uyari(a){
 			}
 			});
     	});
+		$("#uyari").on("hidden.bs.modal", function () {
+			$(".alert").removeClass(b);
+		});
 	}
 	else 
 		$('#uyari').modal({backdrop: "static"});
@@ -69,28 +72,26 @@ function giris(){
 						if(kontrol=="tc-hata"){
 							$("#mesajb").html("Hata");
 							$("#mesaj").html("Sistemde böyle bir T.C. Kimlik Numarası bulunmamaktadır...");
-							$(".alert").addClass("alert-warning"); uyari(1);
-						}
-						else if(kontrol=="tc-kayit"){
-							$("#mesajb").html("Dikkat");
-							$("#mesaj").html("Belirtilen T.C. Kimlik Numarası sistemde bulunamamıştır.Lütfen kontrol ediniz...");
-							$(".alert").addClass("alert-warning"); uyari(1);
+							$(".alert").addClass("alert-warning"); uyari(1,"alert-warning");
 						}
 						else if(kontrol=="hata-sifre"){
 							$("#mesajb").html("Hatalı Şifre");
 							$("#mesaj").html("Hatalı bir şifre girdiniz.Lütfen tekrar deneyin...");
-							$(".alert").addClass("alert-danger"); uyari(1);
+							$(".alert").addClass("alert-danger"); uyari(1,"alert-danger");
+							
+							
 						}
 						else if(kontrol=="dsifre"){
 							$("#mesajb").html("Doğrulama Başarılı");
 							$("#mesaj").html("Yönetici paneline yönlendiriliyorsunuz...");
-							$(".alert").addClass("alert-success"); uyari(2);
+							$(".alert").addClass("alert-success"); uyari(2,"alert-success");
 							setTimeout(function(){location.href="panel.php"} , 2000);
 						}
 						else {
 							$("#mesajb").html("Hata!");
 							$("#mesaj").html("Bilinmeyen bir hata meydane geldi.Lütfen daha sonra tekrar deneyiniz...");
-							$(".alert").addClass("alert-danger"); uyari(1);
+							$(".alert").addClass("alert-danger"); uyari(1,"alert-danger");
+							
 						}
 					}
 				});	 
