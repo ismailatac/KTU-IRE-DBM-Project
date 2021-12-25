@@ -2,8 +2,8 @@
 session_start();
 
 ob_start();
-if(isset($_SESSION["oturum"])) 
-{header("Refresh:0;url=index.php");}
+if(!isset($_SESSION["oturum"])) 
+{header("Refresh:0;url=../index.php");}
 else{
 ?>
 <!doctype html>
@@ -28,9 +28,9 @@ if(mysqli_connect_errno()) {
 	die();
 }
 	$Sorgu = mysqli_query($con,"SELECT wt.*, e.first_name, e.last_name, we.day
-		FROM workingtimes as wt
+		FROM workingTimes as wt
 		INNER JOIN employees as e
-		INNER JOIN doweek as we
+		INNER JOIN doWeek as we
 		ON wt.employeeID = e.id and wt.dayID=we.dID
 		ORDER BY wt.wtID");
 		if($Sorgu) {
