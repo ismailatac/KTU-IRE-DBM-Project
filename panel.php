@@ -3,7 +3,7 @@ session_start();
 
 ob_start();
 if(isset($_SESSION["oturum"])) 
-{header("Refresh:0;url=panel.php");}
+{header("Refresh:0;url=index.php");}
 else{
 ?>
 
