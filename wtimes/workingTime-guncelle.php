@@ -32,7 +32,7 @@ $GelenIdDegeri = $_GET["wtID"];
 						<div class="form-group row">
 							<label for="employeeID" class="col-sm-2 col-form-label">Çalışan ID</label>
 							<div class="col-sm-10">
-								<input type="number" name="employeeID" value="<?php echo $Kayit["employeeID"]; ?>" disabled>
+								<input class="form-control" type="number" name="employeeID" value="<?php echo $Kayit["employeeID"]; ?>" disabled>
 							</div>
 						</div><br />
 						<div class="form-group row">

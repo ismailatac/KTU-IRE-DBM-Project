@@ -1,0 +1,28 @@
+@charset "utf-8";
+/* CSS Document */
+*{margin: 0;}
+html, body {
+background-color: white;
+background:url("pic/aaa.jpeg") no-repeat center center fixed;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+
+}
+html{
+overflow-x:hidden;
+}
+.buton1{
+	position: relative;
+	left: 30px;
+	top: 40px;
+	
+}
+#employee{
+	position: relative;
+	left: 30px;
+	top:30px;
+	
+	
+}

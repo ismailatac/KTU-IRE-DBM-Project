@@ -144,10 +144,10 @@ else{
 	right:30%;
 	top:10px;
 	height: 80px;
-	width: 500px;
+	width: 600px;
 	  }
 	  .pe{
-	font-size: 50px;
+	font-size: 30px;
 	font-weight: bold;
 }
 html, body {
@@ -168,14 +168,14 @@ background-size: cover;
 	
 	
 	
-  <a style="color: black" href="anasayfa.php"><div class="icr"><p><span class="pe">IRE   </span> <span class="pe">H</span>ealth   <span class="pe">C</span>enter   of  <span class="pe">E</span >mployees</span></div></a>
-  <a style="color: white" href="employees.php"><div class="calis-btn"><button class="button" >ÇALIŞANLAR</button></div></a>
-	<a style="color: white" href="employeesanddiseases.php"><div class="h-ve-r"><button  class="button">HASTALIK VE REÇETE</button></div></a>
-  <a style="color: white" href="covid.php"><div class="cvd"><button  class="button">COVID</button></div></a>
-  <a style="color: white" href="workingtime.php"><div class="calis-saat"><button  class="button">ÇALIŞMA SAATLERİ</button></div></a>
-  <a style="color: white" href=""><div class="list"><button  class="button">LİSTELER VE İSTATİSTİKİ BİLGİLER</button></div></a>
-	<div class="kisi-ad">Kişi Adı</div>
-	<a href=""><div class="cikis-btn"><button style="color: white" class="button">Çıkış yap</button></div></a>
+  <a style="color: black" href="panel.php"><div class="icr"><span class="pe">IRE    Health  Center   of  Employees </span></div></a>
+  <a style="color: white" href="employees/employees.php"><div class="calis-btn"><button class="button" >ÇALIŞANLAR</button></div></a>
+	<a style="color: white" href="empdis/empdis.php"><div class="h-ve-r"><button  class="button">HASTALIK VE REÇETE</button></div></a>
+  <a style="color: white" href="covid/covid.php"><div class="cvd"><button  class="button">COVID</button></div></a>
+  <a style="color: white" href="wtimes/workingTimes.php"><div class="calis-saat"><button  class="button">ÇALIŞMA SAATLERİ</button></div></a>
+  <a style="color: white" href="sorgui.php"><div class="list"><button  class="button">LİSTELER VE İSTATİSTİKİ BİLGİLER</button></div></a>
+	
+	
   
 </body>
 

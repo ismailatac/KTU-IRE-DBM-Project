@@ -1,0 +1,78 @@
+@charset "utf-8";
+/* CSS Document */
+*{margin: 0;}
+html, body {
+background-color: white;
+background:url("../aaa.jpeg") no-repeat center center fixed;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+}
+html{
+overflow-x:hidden;
+}
+.kmenu {
+    height: auto;
+    max-height: 200px;
+    overflow-x: hidden;
+}
+
+
+.sol{
+	position: absolute;
+	top: 155px;
+	left: 50px;
+	width: 600px;
+	height: 450px;
+	background-color: #fffafa;
+	
+}
+.sag{
+		position:absolute;
+	top: 50px;
+	right: 20px;
+	width: 800px;
+	height: 600px;
+	background-color: #fffafa;
+	
+	
+}
+.baslik{
+	
+	position: absolute;
+	top: 15px;
+	left: 15px;
+	font-size: 14px;
+	color: #4d4d4d;
+    font-family:"advent-pro"; 
+}
+.he{
+	width: 96%;
+	position: absolute;
+	left: 8px;
+	top: 30px;
+	border-bottom: none;
+	border-left: none;
+	border-right: none;
+}
+.kay{
+	width: 300px;
+	height: 300px;
+	position: relative;
+	top: 50px;
+	left: 50px;
+}
+.btn-group{
+		margin-bottom: 8px;
+}
+#sorgumet{
+	width: 500px;
+	
+	
+	
+}
+#empTable{
+  caption-side: top;
+  margin-top:40px;
+}

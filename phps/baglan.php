@@ -8,7 +8,7 @@ else{
 	$kullanici = "root"; //veritabanı kullanıcı adı
 	$sifre = "Badem*5361"; //veritabanı şifresi
 	$host = "localhost"; //mysql server
-	$vt = "denIRE"; //veritabanı adı
+	$vt = "denIRE2"; //veritabanı adı
 
 
 	$con=mysqli_connect($host,$kullanici,$sifre,$vt);

@@ -1,0 +1,97 @@
+@charset "utf-8";
+/* CSS Document */
+*{margin: 0;}
+html, body {
+background-color: white;
+background:url("pic/aaa.jpeg") no-repeat center center fixed;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+
+}
+html{
+overflow-x:hidden;
+}
+
+.ic
+{
+	position: absolute;
+	left:32%;
+	right:30%;
+	top:250px;
+	background-color: white;
+	height: 180px;
+	width: 500px;
+	border-radius: 8px;
+
+}
+.t1{
+   position: relative;
+   top:20px;
+	left: 20px;
+	height: 35px;
+	border-radius: 5px;
+
+}
+.t2{
+   position: relative;
+   top:20px;
+	left: 20px;
+	height: 35px;
+	border-radius: 5px;
+
+}
+.buton1{
+	position: relative;
+	top:10px;
+	left: 20px;
+	color: white;
+	background-color:#503da7;
+	width: 450px;
+	height: 35px;
+	border-radius: 5px;
+}
+.icr{
+	position: absolute;
+	left:32%;
+	right:30%;
+	top:220px;
+	height: 30px;
+	width: 500px;
+}
+
+.pe{
+	font-size: 20px;
+	font-weight: bold;
+}
+b{
+	font-size: 25px;
+}
+.a{
+	color: blue;
+}
+.ui-widget-overlay
+{
+    background-color: black;
+    background-image: none;
+    opacity: 0.4;
+    z-index: 1040;    
+}
+.popover {
+      border: 2px solid red;
+  }
+ .popover-header {
+      background-color: #8B0000; 
+      color: #FFFFFF; 
+      font-size: 20px;
+      text-align:center;
+  }
+  .popover-body {
+      background-color:#F0FFF0 ;
+      color: black;
+      padding: 15px;
+  }
+  .arrow {
+      border-right-color: red !important;
+  }

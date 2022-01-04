@@ -31,7 +31,15 @@ switch($operation) {
 			$Uzunluk = mb_strlen($GelenTCNo);
 				if(empty($GelenTCNo)) {
 					$message = 'Lütfen TC Kimlik No\'yu boş bırakmayın:::warning';
-				} else if($Uzunluk!=11) {
+				}else if(empty($GelenIsim) or empty($GelenSoyIsim)) {
+					$message = 'Lütfen isim ve soyisim alanlarını boş bırakmayın:::warning';
+				}else if(empty($GelenDogulanSehir)) {
+					$message = 'Lütfen doğduğu şehir alanını boş bırakmayın:::warning';
+				}else if(empty($GelenPozisyon)) {
+					$message = 'Lütfen pozisyon alanını boş bırakmayın:::warning';
+				}else if(empty($GelenMaasDegeri)) {
+					$message = 'Lütfen maaş alanını boş bırakmayın:::warning';
+				}else if($Uzunluk!=11) {
 					$message = 'TC Kimlik Numarası 11 Haneli olmalıdır. Lütfen girdiğiniz numarayı kontrol ediniz:::warning';
 				}else {
 					$isHave = mysqli_query($con,"SELECT id FROM employees WHERE tcno='$GelenTCNo'");

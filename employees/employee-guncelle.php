@@ -32,67 +32,67 @@ $GelenIdDegeri = $_GET["id"];
 						<div class="form-group row">
 							<label for="tcno" class="col-sm-2 col-form-label">Çalışan TC No</label>
 							<div class="col-sm-10">
-								<input type="number" name="tcno" value="<?php echo $Kayit["tcno"]; ?>" disabled>
+								<input class="form-control" type="number" name="tcno" value="<?php echo $Kayit["tcno"]; ?>" disabled>
 							</div>
 						</div><br />
 						<div class="form-group row">
 							<label for="firstname" class="col-sm-2 col-form-label">İsim</label>
 							<div class="col-sm-10">
-								<input type="text" name="firstname" value="<?php echo $Kayit["first_name"]; ?>" disabled>
+								<input class="form-control" type="text" name="firstname" value="<?php echo $Kayit["first_name"]; ?>" disabled>
 							</div>
 						</div><br />
 						<div class="form-group row">
 							<label for="lastname" class="col-sm-2 col-form-label">Soyisim</label>
 							<div class="col-sm-10">
-								<input type="text" name="lastname" value="<?php echo $Kayit["last_name"]; ?>" disabled>
+								<input class="form-control" type="text" name="lastname" value="<?php echo $Kayit["last_name"]; ?>" disabled>
 							</div>
 						</div><br />
 						<div class="form-group row">
 							<label for="bloodtype" class="col-sm-2 col-form-label">Kan Grubu</label>
 							<div class="col-sm-10">
-								<input type="text" name="bloodtype" value="<?php echo $Kayit["blood_type"]; ?>" disabled>
+								<input class="form-control" type="text" name="bloodtype" value="<?php echo $Kayit["blood_type"]; ?>">
 							</div>
 						</div><br />
 						<div class="form-group row">
 							<label for="cityofbirthid" class="col-sm-2 col-form-label">Doğduğu Şehir</label>
 							<div class="col-sm-10">
-								<input type="number" name="cityofbirthid" value="<?php echo $Kayit["cityofbirth_id"]; ?>" disabled>
+								<input class="form-control" type="number" name="cityofbirthid" value="<?php echo $Kayit["cityofbirth_id"]; ?>" disabled>
 							</div>
 						</div><br />
 						<div class="form-group row">
 							<label for="position" class="col-sm-2 col-form-label">Pozisyon</label>
 							<div class="col-sm-10">
-								<input type="text" name="position" value="<?php echo $Kayit["position"]; ?>">
+								<input class="form-control" type="text" name="position" value="<?php echo $Kayit["position"]; ?>" required/>
 							</div>
 						</div><br />
 						<div class="form-group row">
 							<label for="salary" class="col-sm-2 col-form-label">Maaş</label>
 							<div class="col-sm-10">
-								<input type="number" name="salary" value="<?php echo $Kayit["salary"]; ?>">
+								<input class="form-control" type="number" name="salary" value="<?php echo $Kayit["salary"]; ?>" required/>
 							</div>
 						</div><br />
 						<div class="form-group row">
 							<label for="hobbies" class="col-sm-2 col-form-label">Hobiler</label>
 							<div class="col-sm-10">
-								<input type="text" name="hobbies" value="<?php echo $Kayit["hobbies"]; ?>">
+								<input class="form-control" type="text" name="hobbies" value="<?php echo $Kayit["hobbies"]; ?>">
 							</div>
 						</div><br />
 						<div class="form-group row">
 							<label for="undergraduate" class="col-sm-2 col-form-label">Lisans</label>
 							<div class="col-sm-10">
-								<input type="text" name="undergraduate" value="<?php echo $Kayit["undergraduate"]; ?>">
+								<input class="form-control" type="text" name="undergraduate" value="<?php echo $Kayit["undergraduate"]; ?>">
 							</div>
 						</div><br />
 						<div class="form-group row">
 							<label for="graduate" class="col-sm-2 col-form-label">Yüksek Lisans</label>
 							<div class="col-sm-10">
-								<input type="text" name="graduate" value="<?php echo $Kayit["graduate"]; ?>">
+								<input class="form-control" type="text" name="graduate" value="<?php echo $Kayit["graduate"]; ?>">
 							</div>
 						</div><br />
 						<div class="form-group row">
 							<label for="doctorate" class="col-sm-2 col-form-label">Doktora</label>
 							<div class="col-sm-10">
-								<input type="text" name="doctorate" value="<?php echo $Kayit["doctorate"]; ?>">
+								<input class="form-control" type="text" name="doctorate" value="<?php echo $Kayit["doctorate"]; ?>">
 							</div>
 						</div><br />
 						<input type="submit" class="btn btn-primary" value="Güncelle">

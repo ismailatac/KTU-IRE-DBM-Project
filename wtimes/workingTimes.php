@@ -13,6 +13,7 @@ else{
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css"/>
 <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
 <meta http-equiv="Content-Language" content="tr">
 <meta charset="utf-8">
@@ -37,7 +38,7 @@ if(mysqli_connect_errno()) {
 			$KayitSayisi = mysqli_num_rows($Sorgu);
 				if($KayitSayisi>0) {
 	
-	$metin="<div class='container'><div class='row-mt-4'><table id='wtTable' class='table table-striped table-bordered table-hover caption-top table-condensed display' cellspacing='0' width='100%'>
+	$metin="<div class='container-fluid'><div class='row-mt-4'><table id='wtTable' class='table table-striped table-bordered table-hover caption-top table-condensed display' cellspacing='0' width='100%'>
 	       <caption>List of working times</caption>
 		   <thead>
 			<tr style='background-color:#34B6AF'>
@@ -52,7 +53,7 @@ if(mysqli_connect_errno()) {
 		<tbody id='tableResult'>";
 		    while($Kayit=mysqli_fetch_assoc($Sorgu)){ 
 		$metin.=		
-		'<tr style="background-color:#0FD287" id="'.$Kayit['wtID'].'"><th scope="row">'.$Kayit['wtID'].'</th>
+		'<tr style="background-color:#0BF69F" id="'.$Kayit['wtID'].'"><th scope="row">'.$Kayit['wtID'].'</th>
 			<td scope="row">'.$Kayit['employeeID'].'-'.$Kayit["first_name"].' '.$Kayit["last_name"].'</td>
 			<td scope="row">'.$Kayit['dayID'].'-'.$Kayit['day'].'</td>
 			<td scope="row">'.$Kayit['start_Time'].'</td>
@@ -64,15 +65,6 @@ if(mysqli_connect_errno()) {
 			}
 			$metin.="		
 		</tbody>
-		<tfoot>
-            <tr>
-			  <th scope='col'>Çalışma zamanı IDsi</th>
-			  <th scope='col'>Çalışanlar</th>
-			  <th scope='col'>Günler</th>
-			  <th scope='col'>Başlangıç Zamanı</th>
-			  <th scope='col'>Bitiş Zamanı</th>
-            </tr>
-        </tfoot>
 	</table></div></div>";
 			echo $metin;
 		   } else {
@@ -114,7 +106,7 @@ if(mysqli_connect_errno()) {
 									<div class="col-sm-10">
 									<select class="form-control" name="dayID" id="dayID">
 									<option value="0">Gün Seç</option>
-									<?php $Sorgu = mysqli_query($con, "SELECT * FROM doweek");
+									<?php $Sorgu = mysqli_query($con, "SELECT * FROM doWeek");
 										foreach($Sorgu as $item) {
 									?>
 									<option value="<?php echo $item["dID"]; ?>"><?php echo $item["day"]; ?></option>

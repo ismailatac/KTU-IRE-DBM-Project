@@ -14,6 +14,7 @@ else{
 <link rel="stylesheet" href="./style.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css"/>
 <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
 <meta http-equiv="Content-Language" content="tr">
 <meta charset="utf-8">
@@ -38,7 +39,16 @@ if(mysqli_connect_errno()) {
 			$KayitSayisi = mysqli_num_rows($Sorgu);
 				if($KayitSayisi>0) {
 	
-	$metin="<div class='container' ><table id='empTable' class='table table-striped table-bordered table-hover caption-top table-condensed display' cellspacing='0'>
+	$metin="<table border='0' cellspacing='5' cellpadding='5'>
+        <tbody><tr>
+            <td>Minimum Maaş:</td>
+            <td><input type='text' id='min' name='min'></td>
+        </tr>
+        <tr>
+            <td>Maximum Maaş:</td>
+            <td><input type='text' id='max' name='max'></td>
+        </tr>
+    </tbody></table><div class='container-fluid' ><table id='empTable' class='table table-striped table-bordered table-hover caption-top table-condensed display' cellspacing='0'>
 	       <caption>List of employees</caption>
 		   <thead>
 			<tr style='background-color:#F6E00B'>
@@ -79,22 +89,6 @@ if(mysqli_connect_errno()) {
 			}
 			$metin.="		
 		</tbody>
-		<tfoot>
-            <tr>
-			  <th scope='col'>ID</th>
-			  <th scope='col'>TC No</th>
-			  <th scope='col'>İsim</th>
-			  <th scope='col'>Soyisim</th>
-			  <th scope='col'>Kan grubu</th>
-			  <th scope='col'>Doğduğu Şehir</th>
-			  <th scope='col'>Pozisyon</th>
-			  <th scope='col'>Maaş</th>
-			  <th scope='col'>Hobiler</th>
-			  <th scope='col'>Lisans</th>
-			  <th scope='col'>Yüksek Lisans</th>
-			  <th scope='col'>Doktora</th>
-            </tr>
-        </tfoot>
 	</table></div>";
 			echo $metin;
 		   } else {
@@ -120,28 +114,28 @@ if(mysqli_connect_errno()) {
 				  		<div class="card-body">
 							<form class="form" method="post" id="FormAddEmp">
 								<div class="form-group row">
-									<div class="form-group row">
-							<label for="tcno" class="col-sm-2 col-form-label">Çalışan TC No</label>
-							<div class="col-sm-10">
-								<input type="number" name="tcno">
-							</div>
-						</div><br />
+									<label for="tcno" class="col-sm-2 col-form-label">Çalışan TC No</label>
+									<div class="col-sm-10">
+										<input type="number" class="form-control" name="tcno" id="tcno">
+									</div>
+								</div><br />
 						<div class="form-group row">
 							<label for="firstname" class="col-sm-2 col-form-label">İsim</label>
 							<div class="col-sm-10">
-								<input type="text" name="firstname">
+								<input type="text" class="form-control" name="firstname" id="firstname">
 							</div>
 						</div><br />
 						<div class="form-group row">
 							<label for="lastname" class="col-sm-2 col-form-label">Soyisim</label>
 							<div class="col-sm-10">
-								<input type="text" name="lastname">
+								<input type="text" class="form-control" name="lastname" id="lastname">
 							</div>
 						</div><br />
 						<div class="form-group row">
 							<label for="bloodtype" class="col-sm-2 col-form-label">Kan Grubu</label>
+							<div class="col-sm-10">
 							<select class="form-control" name="bloodtype" id="bloodtype">
-								<option>Kan Grubu Seç</option>
+								<option value="">Kan Grubu Seç</option>
 								<option> 0-</option>
 								<option> 0+</option>
 								<option> A-</option>
@@ -151,6 +145,7 @@ if(mysqli_connect_errno()) {
 								<option> AB-</option>
 								<option> AB+</option>
 							</select>
+							</div>
 						</div><br />
 						<div class="form-group row">
 						<label for="cityofbirthid" class="col-sm-2 col-form-label">Şehir</label>
@@ -168,37 +163,37 @@ if(mysqli_connect_errno()) {
 						<div class="form-group row">
 							<label for="position" class="col-sm-2 col-form-label">Pozisyon</label>
 							<div class="col-sm-10">
-								<input type="text" name="position">
+								<input type="text" class="form-control" name="position" id="position">
 							</div>
 						</div><br />
 						<div class="form-group row">
 							<label for="salary" class="col-sm-2 col-form-label">Maaş</label>
 							<div class="col-sm-10">
-								<input type="number" name="salary">
+								<input type="number" class="form-control" name="salary" id="salary">
 							</div>
 						</div><br />
 						<div class="form-group row">
 							<label for="hobbies" class="col-sm-2 col-form-label">Hobiler</label>
 							<div class="col-sm-10">
-								<input type="text" name="hobbies">
+								<input type="text" class="form-control" name="hobbies" id="hobbies">
 							</div>
 						</div><br />
 						<div class="form-group row">
 							<label for="undergraduate" class="col-sm-2 col-form-label">Lisans</label>
 							<div class="col-sm-10">
-								<input type="text" name="undergraduate">
+								<input type="text" class="form-control" name="undergraduate" id="undergraduate">
 							</div>
 						</div><br />
 						<div class="form-group row">
 							<label for="graduate" class="col-sm-2 col-form-label">Yüksek Lisans</label>
 							<div class="col-sm-10">
-								<input type="text" name="graduate">
+								<input type="text" class="form-control" name="graduate" id="graduate">
 							</div>
 						</div><br />
 						<div class="form-group row">
 							<label for="doctorate" class="col-sm-2 col-form-label">Doktora</label>
 							<div class="col-sm-10">
-								<input type="text" name="doctorate">
+								<input type="text" class="form-control" name="doctorate" id="doctorate">
 							</div>
 						</div><br />
 								<div class="form-group row">
@@ -207,7 +202,6 @@ if(mysqli_connect_errno()) {
 								<button type="button" class="btn btn-primary" name="mysubmit" id="mysubmit" onClick="sendForm('FormAddEmp', 'AddEmp', 'employees.php')">Kaydet <span class="myload"></span></button>
 							</form>
 				  		</div>
-						</div>
 					</div>
 				</div>
 			</div>

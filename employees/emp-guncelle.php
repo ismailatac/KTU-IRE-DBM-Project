@@ -16,4 +16,5 @@
 		} else {
 			echo "Sorgu Hatası";
 		}
+	
 ?>

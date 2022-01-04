@@ -28,14 +28,6 @@ function Harf(e) {
 function uyari(a,b){
 	if(a==1){
 		$('#uyari').modal();
-		$("#uyari").on('shown.bs.modal', function () {
-		$('body').keypress(function(e){
-			if(e.keyCode==13 && a==1){
-			  $("#uyari").modal("hide");
-				e.keyCode==0;
-			}
-			});
-    	});
 		$("#uyari").on("hidden.bs.modal", function () {
 			$(".alert").removeClass(b);
 		});
